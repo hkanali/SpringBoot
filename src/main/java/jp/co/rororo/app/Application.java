@@ -1,4 +1,4 @@
-package hello;
+package jp.co.rororo.app;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(value = {"web", "hello"})
+@ComponentScan(value = {"jp.co.rororo"})
 public class Application {
     
     public static void main(String[] args) {
