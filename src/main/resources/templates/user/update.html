@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form th:attr="action=@{/api/user/{id}(id=${user.id})}" role="userForm"
+		method="POST">
+		<!-- TODO PUTにする -->
+		<div class="form-group"
+			th:object="${#objects.nullSafe(user, new jp.co.rororo.entity.User())}">
+			<input type="text" id="name" name="name" value="ユーザー名"
+				th:attr="value=*{name}?: ''" /> <input type="email" id="email"
+				name="email" value="メール" th:attr="value=*{email}?: ''" /> <input
+				type="text" id="bio" name="bio" value="bio"
+				th:attr="value=*{bio}?: ''" /> <input type="submit" value="送信" />
+		</div>
+	</form>
+</body>
+</html>
