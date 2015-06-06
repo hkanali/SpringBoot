@@ -29,7 +29,7 @@ public class UserController {
 		;
 		return user;
 	}
-
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public List<User> getAll() {
 		List<User> users = userRepository.findAll();

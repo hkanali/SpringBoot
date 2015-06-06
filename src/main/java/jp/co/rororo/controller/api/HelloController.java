@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "api/hello")
 public class HelloController {
-
-    @RequestMapping(method = RequestMethod.GET)
-    public String index() {
-        log.info("ApiController");
-        return "Greetings from Spring Boot!";
-    }
-
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public String index() {
+		log.info("ApiController");
+		return "Greetings from Spring Boot!";
+	}
+	
 }
