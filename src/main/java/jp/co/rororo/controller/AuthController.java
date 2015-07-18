@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AuthController {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String viewEntry() {
+	public String viewLogin() {
 		return "auth/login";
 	}
 }

@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 public class HelloController {
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
-	public String viewEntry(HttpServletRequest request) {
+	public String viewHome(HttpServletRequest request) {
 		log.info("login as {}.", request.getRemoteUser());
 		return "home";
 	}

@@ -1,7 +1,5 @@
 package jp.co.rororo.controller;
 
-import javax.websocket.server.PathParam;
-
 import jp.co.rororo.form.UserForm;
 import jp.co.rororo.service.UserService;
 
