@@ -1,29 +1,26 @@
 package jp.co.rororo.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
+@NoArgsConstructor
+@AllArgsConstructor
 @Table
 @Entity
-public class User extends BaseEntity {
+public class RememberMeToken extends BaseEntity {
 	
 	@Id
-	@GeneratedValue
-	private Long id;
+	private String series;
 	
-	private String name;
+	private String token;
 	
-	private String email;
-	
-	private String password;
-	
-	private String bio;
-	
+	private Long userId;
 }

@@ -25,7 +25,7 @@ public class UserService extends BaseService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
-	public User findUser(Integer userId) {
+	public User findUser(Long userId) {
 		return userRepository.findOne(userId);
 	}
 	
@@ -46,7 +46,7 @@ public class UserService extends BaseService {
 	}
 	
 	@Transactional
-	public User updateUser(Integer userId, UserForm userForm) {
+	public User updateUser(Long userId, UserForm userForm) {
 		User user = userRepository.findOne(userId);
 		BeanUtils.copyProperties(userForm, user);
 		user.setUpdateAt(new Date());

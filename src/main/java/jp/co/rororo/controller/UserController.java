@@ -25,7 +25,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "{userId:[0-9]+}", method = RequestMethod.GET)
-	public String viewEdit(@ModelAttribute UserForm userform, @PathVariable("userId") Integer userId, Model model) {
+	public String viewEdit(@ModelAttribute UserForm userform, @PathVariable("userId") Long userId, Model model) {
 		model.addAttribute("user", userService.findUser(userId));
 		return "user/update";
 	}

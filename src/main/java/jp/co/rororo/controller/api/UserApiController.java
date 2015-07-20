@@ -25,7 +25,7 @@ public class UserApiController {
 	private UserService userService;
 	
 	@RequestMapping(value = "{userId:[0-9]+}", method = RequestMethod.GET)
-	public User getOne(@PathVariable("userId") Integer userId) {
+	public User getOne(@PathVariable("userId") Long userId) {
 		User user = userService.findUser(userId);
 		if (user == null) {
 			log.info("user(userId={}) does not exist.", userId);
@@ -52,7 +52,7 @@ public class UserApiController {
 	}
 
 	@RequestMapping(value = "{userId:[0-9]+}", method = RequestMethod.POST) //TODO 本当はPUTがいいな〜
-	public User insert(@Valid UserForm userForm, @PathVariable("userId") Integer userId, BindingResult bindingResult) {
+	public User insert(@Valid UserForm userForm, @PathVariable("userId") Long userId, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			log.info("validation error");
 			return null;
